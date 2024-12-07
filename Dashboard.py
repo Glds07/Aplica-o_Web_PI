@@ -65,19 +65,6 @@ dados = dados[:num_dias]
 st.bar_chart(dados, x="Data", y="Valor Total (R$)")
 
 
-with st.container():
-    st.write("---")
-st.subheader("Porcetagem das vendas de roupas de João e Katia:")
-labels = ['João Mendes', 'Kátia Souza']
-sizes = [53.39, 46.61]
-colors = ['#66b3ff', '#ff9999']
-
-fig, ax = plt.subplots()
-ax.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
-ax.axis('equal')
-
-st.pyplot(fig)
-
 st.write("---")
 
 
@@ -134,17 +121,4 @@ num_dias = int(qtde_dias_8.replace("D", " "))
 dados = carregar_dados_calcadosf()
 dados = dados[:num_dias]
 st.bar_chart(dados, x="Data", y="Valor Total (R$)")
-
-with st.container():
-    st.write("---")
-st.subheader("Porcetagem das vendas de calçados de João e Katia:")
-labels = ['João Mendes', 'Kátia Souza']
-sizes = [44.6, 55.6]
-colors = ['#66b3ff', '#ff9999']
-
-fig, ax = plt.subplots()
-ax.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
-ax.axis('equal')
-
-st.pyplot(fig)
 
